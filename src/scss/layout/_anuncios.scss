@@ -10,6 +10,7 @@
 .anuncio {
     background-color: lighten(v.$gris, 5);
     border: 1px solid darken(v.$gris, 10);
+    margin-bottom: 2rem;
 
     .contenido-anuncio {
         padding: 2rem;
@@ -19,16 +20,18 @@
         margin: 0;
     }
 
-    .precio {
-        color: v.$verde;
-        font-size: 3rem;
-        font-weight: v.$bold;
-    }
+}
+
+.precio {
+    color: v.$verde;
+    font-size: 3rem;
+    font-weight: v.$bold;
 }
 
 .iconos-caracteristicas {
     display: flex;
     list-style: none;
+    max-width: 40rem;
     padding: 0;
 
     li {

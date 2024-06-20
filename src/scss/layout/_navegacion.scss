@@ -1,24 +1,58 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+.derecha {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        align-items: flex-end;
+    }
+
+    .dark-mode-boton {
+        filter: invert(100%);
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        width: 3rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include m.tablet {
+            margin-top: 0;
+        }
+    }
+}
+
 .barra {
+    align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
+
     @include m.tablet {
+        align-items: flex-end;
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
 .navegacion {
+    height: 0;
+    opacity: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear, height 0.5s linear;
+    visibility: hidden;
 
     @include m.tablet {
         align-items: center;
         display: flex;
+        opacity: 1;
+        visibility: visible;
     }
 
-    a{
+    a {
         color: v.$blanco;
         display: block;
         font-size: 2.2rem;
@@ -34,4 +68,21 @@
             }
         }
     }
+}
+
+// Menu Mobile
+.mobile-menu {
+    @include m.tablet {
+        display: none;
+    }
+
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
 }

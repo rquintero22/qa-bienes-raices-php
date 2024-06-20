@@ -10,6 +10,12 @@
         padding-top: division(v.$separacion, 2);
     }
 
+    .navegacion {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+
     .copyright {
         color: v.$blanco;
         text-align: center;
