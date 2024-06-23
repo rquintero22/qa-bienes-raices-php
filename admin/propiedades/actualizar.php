@@ -5,6 +5,12 @@
 
     $id = $_GET['id'];
     $id = filter_var($id, FILTER_VALIDATE_INT);
+
+    $auth = estaAutenticado();
+
+    if(!$auth) {
+        header("location: /");
+    }
     
     if (!$id) {
         header('Location: /admin');

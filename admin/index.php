@@ -1,8 +1,17 @@
 <?php 
-
     // Importar la conexión
     require '../includes/config/database.php';
     require '../includes/funciones.php';
+    if (isset($_SESSION)) {
+        session_start();
+    }
+
+    $auth = estaAutenticado();
+
+    if(!$auth) {
+        header("location: /");
+    }
+
     
     $db = conectarDB();
 

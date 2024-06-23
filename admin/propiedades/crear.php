@@ -2,6 +2,12 @@
     
     require '../../includes/config/database.php';
     require '../../includes/funciones.php';
+
+    $auth = estaAutenticado();
+
+    if(!$auth) {
+        header("location: /");
+    }
     
     $db = conectarDB();
 
@@ -101,7 +107,7 @@
 
             // Insertar en base de datos
             $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedorId, creado, imagen)";
-            $query = $query . " VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$banos', '$estacionamiento', '$vendedorId', '$creado', '$nombreImagen')";
+            $query = $query . " VALUES ('$titulo', $precio, '$descripcion', $habitaciones, $banos, $estacionamiento, $vendedorId, '$creado', '$nombreImagen')";
             echo $query;
 
             $resultado = mysqli_query($db, $query);
