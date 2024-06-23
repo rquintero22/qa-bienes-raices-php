@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.alerta {
+    color: v.$blanco;
+    font-weight: bold;
+    padding: .5rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    &.error {
+        background-color: v.$rojo;
+    }
+    &.exito {
+        background-color: v.$verde;
+    }
+}
+
+table.propiedades {
+    border-spacing: 0;
+    margin-top: 4rem;
+    width: 100%;
+
+    thead {
+        background-color: v.$verde;
+
+        th{
+            color: v.$blanco;
+            padding: 2rem;
+        }
+    }
+
+    .imagen-tabla {
+        width: 10rem;
+    }
+}
+
+.imagen-small {
+    width: 20rem;
+}
