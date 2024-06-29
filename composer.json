@@ -1,0 +1,19 @@
+{
+    "name": "rquintero/bienes-raices",
+    "description": "Proyecto de bienes raíces",
+    "type": "proyect",
+    "authors": [
+        {
+            "name": "Raymond",
+            "email": "quinteroaparicio@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./classes"
+        }
+    }
+}
